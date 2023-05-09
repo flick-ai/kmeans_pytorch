@@ -4,7 +4,7 @@ import numpy as np
 import torch
 from tqdm import tqdm
 
-from .soft_dtw_cuda import SoftDTW
+# from .soft_dtw_cuda import SoftDTW
 
 
 def initialize(X, num_clusters, seed):
@@ -30,7 +30,7 @@ def kmeans(
         distance='euclidean',
         cluster_centers=[],
         tol=1e-4,
-        tqdm_flag=True,
+        tqdm_flag=False,
         iter_limit=0,
         device=torch.device('cpu'),
         gamma_for_soft_dtw=0.001,
